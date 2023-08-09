@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "4e8d6032-07f9-4242-8e59-cb9821708f8f",
+		"name": "BlinkAI Short URLs",
+		"description": "[https://blink-ai.github.io/api-short-url/]()",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26966"
+	},
+	"item": [
+		{
+			"name": "Create Short URL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 99d652d0-1ad8-40ed-95bc-916234d0ce7a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"storeId\": \"58c48111e4b0ec56f4b0a358\",\n  \"values\": {\n    \"firstName\": \"Jay\",\n    \"lastName\": \"Patel\",\n    \"phone\": \"15128066149\",\n    \"campaignId\": \"Oil Change\",\n    \"email\": \"test@blinkai.com\",\n    \"vehicleVIN\": \"4T1BF1FK4CU609641\",\n    \"vehicleMake\": \"Toyota\",\n    \"vehicleModel\": \"Camry\",\n    \"vehicleYear\": \"2012\",\n    \"serviceType\": \"OIL_CHANGE\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.blinkai.com/api/shortURLs",
+					"protocol": "https",
+					"host": [
+						"api",
+						"blinkai",
+						"com"
+					],
+					"path": [
+						"api",
+						"shortURLs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 99d652d0-1ad8-40ed-95bc-916234d0ce7a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"storeId\": \"58c48111e4b0ec56f4b0a358\",\n  \"values\": {\n    \"firstName\": \"Jay\",\n    \"lastName\": \"Patel\",\n    \"phone\": \"15128066149\",\n    \"campaignId\": \"Oil Change\",\n    \"email\": \"test@blinkai.com\",\n    \"vehicleVIN\": \"4T1BF1FK4CU609641\",\n    \"vehicleMake\": \"Toyota\",\n    \"vehicleModel\": \"Camry\",\n    \"vehicleYear\": \"2012\",\n    \"serviceType\": \"OIL_CHANGE\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.blinkai.com/api/shortURLs",
+							"protocol": "https",
+							"host": [
+								"api",
+								"blinkai",
+								"com"
+							],
+							"path": [
+								"api",
+								"shortURLs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 09 Aug 2023 02:16:57 GMT"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"storeId\": \"58c48111e4b0ec56f4b0a358\",\n    \"values\": {\n        \"firstName\": \"Jay\",\n        \"lastName\": \"Patel\",\n        \"phone\": \"15128066149\",\n        \"campaignId\": \"Oil Change\",\n        \"email\": \"test@blinkai.com\",\n        \"vehicleVIN\": \"4T1BF1FK4CU609641\",\n        \"vehicleMake\": \"Toyota\",\n        \"vehicleModel\": \"Camry\",\n        \"vehicleYear\": \"2012\",\n        \"serviceType\": \"OIL_CHANGE\",\n        \"transportationType\": null\n    },\n    \"id\": \"OO1UUO4\",\n    \"status\": \"CREATED\",\n    \"url\": \"https://book.blinkai.com/a/OO1UUO4\",\n    \"created\": \"2023-08-09T02:16:57.907Z\",\n    \"updated\": \"2023-08-09T02:16:57.907Z\",\n    \"email_blob_html\": \"<button>Coming Soon</button>\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Short URL by ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Get Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 99d652d0-1ad8-40ed-95bc-916234d0ce7a",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.blinkai.com/api/shortURLs/OO1UUO4",
+							"protocol": "https",
+							"host": [
+								"api",
+								"blinkai",
+								"com"
+							],
+							"path": [
+								"api",
+								"shortURLs",
+								"OO1UUO4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)"
+						},
+						{
+							"key": "date",
+							"value": "Wed, 09 Aug 2023 02:18:02 GMT"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"storeId\": \"58c48111e4b0ec56f4b0a358\",\n    \"values\": {\n        \"firstName\": \"Jay\",\n        \"lastName\": \"Patel\",\n        \"phone\": \"15128066149\",\n        \"campaignId\": \"Oil Change\",\n        \"email\": \"test@blinkai.com\",\n        \"vehicleVIN\": \"4T1BF1FK4CU609641\",\n        \"vehicleMake\": \"Toyota\",\n        \"vehicleModel\": \"Camry\",\n        \"vehicleYear\": \"2012\",\n        \"serviceType\": \"OIL_CHANGE\",\n        \"transportationType\": null\n    },\n    \"id\": \"OO1UUO4\",\n    \"status\": \"CREATED\",\n    \"url\": \"https://book.blinkai.com/a/OO1UUO4\",\n    \"created\": \"2023-08-09T02:16:57.907Z\",\n    \"updated\": \"2023-08-09T02:16:57.907Z\",\n    \"email_blob_html\": \"<button>Coming Soon</button>\"\n}"
+				}
+			]
+		}
+	]
+}

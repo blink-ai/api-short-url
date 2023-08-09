@@ -33,31 +33,31 @@ info:
 servers:
   - url: https://api.blinkai.com/api
 paths:
-  /short_urls:
+  /shortURLs:
     post:
       tags:
         - Short URLs
       description: Create a new short URL. The only real information that is required is storeId. All other fields are optional. All the fields under values are used to personalize the experience for the customer.
-      operationId: createShortUrl
+      operationId: createshortURL
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ShortUrl'
+              $ref: '#/components/schemas/shortURL'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ShortUrlResponse'
-  /short_urls/{id}:
+                $ref: '#/components/schemas/shortURLResponse'
+  /shortURLs/{id}:
     get:
       tags:
         - Short URLs
       description: Get a short URL by ID
-      operationId: getShortUrlById
+      operationId: getshortURLById
       parameters:
         - name: id
           in: path
@@ -70,7 +70,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ShortUrlResponse'
+                $ref: '#/components/schemas/shortURLResponse'
 components:
   schemas:
     Values:
@@ -117,7 +117,7 @@ components:
           type: string
           example: WAITER
           description: Transportation Type value provided by BlinkAI. Please note that this must match one of the added values in Store configuration
-    ShortUrl:
+    shortURL:
       type: object
       required:
         - storeId
@@ -128,7 +128,7 @@ components:
           example: 64cc663b9c61721f0e1d4f82
         values:
           $ref: '#/components/schemas/Values'
-    ShortUrlResponse:
+    shortURLResponse:
       type: object
       properties:
         id:
@@ -172,4 +172,3 @@ components:
       scheme: bearer
 security:
   - BearerAuth: []
-  
